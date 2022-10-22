@@ -556,6 +556,24 @@ img {
 .footer-soclinks .icon-linkedin {
   fill: var(--nav-background-color);
 }
+.signup-form {
+  margin-left: 93px;
+  min-width: 570px;
+}
+.signup-form-field {
+}
+.signup-form-title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--nav-background-color);
+}
 
 /* Modal window styles */
 
