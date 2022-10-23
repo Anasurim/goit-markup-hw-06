@@ -698,6 +698,9 @@ img {
   margin-top: 4px;
   border: var(--modal-form-input-border);
   border-radius: 4px;
+
+  transition: border 250ms var(--hover-time-func),
+    fill 250ms var(--hover-time-func);
 }
 .icon-name,
 .icon-phone,
@@ -708,7 +711,6 @@ img {
 }
 .modal-form-input:focus-within {
   border: var(--modal-form-input-border-accent);
-  border-radius: 4px;
 }
 .modal-form-input:focus-visible {
   outline: none;
@@ -724,10 +726,14 @@ img {
   min-height: 120px;
   resize: none;
   margin-top: 4px;
+  margin-bottom: 20px;
 
   border: var(--modal-form-input-border);
   border-radius: 4px;
+
+  transition: border 250ms var(--hover-time-func);
 }
+
 .modal-form-comment [placeholder] {
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -737,15 +743,42 @@ img {
 
 .modal-form-comment:focus-within {
   border: var(--modal-form-input-border-accent);
-  border-radius: 4px;
 }
 
 .modal-form-comment:focus-visible {
   outline: none;
 }
+
 .modal-link {
   color: var(--accent-color);
 }
+
+.modal-check {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.icon-check {
+  display: inline-block;
+  margin-right: 7px;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+
+  transition: background-color 250ms var(--hover-time-func),
+    border 250ms var(--hover-time-func);
+}
+
+.modal-check-input:checked + .icon-check {
+  background-color: var(--accent-color);
+  background-origin: border-box;
+  border: var(--accent-color);
+}
+
+.send-btn {
+  display: block;
+  margin: 0 auto;
+}
+
 .close-btn {
   position: absolute;
   display: inline-block;
@@ -866,6 +899,7 @@ img {
 
   transition: transform 250ms var(--hover-time-func);
 }
+
 .gallery-portfolio-list > .item a:hover .portfolio-overlay,
 .gallery-portfolio-list > .item a:focus .portfolio-overlay {
   transform: translateY(0);
