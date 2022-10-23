@@ -679,6 +679,7 @@ img {
   color: var(--secondary-text-color);
 }
 .modal-form-label {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -689,8 +690,6 @@ img {
 }
 
 .modal-form-input {
-  position: relative;
-
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -699,9 +698,12 @@ img {
   border: var(--modal-form-input-border);
   border-radius: 4px;
 }
-.icon-name {
+.icon-name,
+.icon-phone,
+.icon-email {
   position: absolute;
   top: 50%;
+  left: 12px;
 }
 
 .modal-form-comment {
