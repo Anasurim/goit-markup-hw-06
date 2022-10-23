@@ -14,6 +14,7 @@
   --hover-time-func: cubic-bezier(0.4, 0, 0.2, 1);
   --bgc-overlay: rgba(33, 150, 243, 0.9);
   --modal-form-input-border: 1px solid rgba(33, 33, 33, 0.2);
+  --modal-form-input-border-accent: 1px solid #2196f3;
 }
 
 body {
@@ -168,7 +169,7 @@ img {
 }
 /* hero styles */
 .hero {
-  max-width: 1600px;
+  min-width: 1600px;
   height: 600px;
   background-color: #c4c4c4;
   background-image: linear-gradient(
@@ -705,6 +706,18 @@ img {
   top: 50%;
   left: 12px;
 }
+.modal-form-input:focus-within {
+  border: var(--modal-form-input-border-accent);
+  border-radius: 4px;
+}
+.modal-form-input:focus-visible {
+  outline: none;
+}
+.modal-form-input:focus-within + .icon-name,
+.modal-form-input:focus-within + .icon-phone,
+.modal-form-input:focus-within + .icon-email {
+  fill: var(--accent-color);
+}
 
 .modal-form-comment {
   padding: 12px 16px;
@@ -712,12 +725,26 @@ img {
   resize: none;
   margin-top: 4px;
 
+  border: var(--modal-form-input-border);
+  border-radius: 4px;
+}
+.modal-form-comment [placeholder] {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  border: var(--modal-form-input-border);
+}
+
+.modal-form-comment:focus-within {
+  border: var(--modal-form-input-border-accent);
   border-radius: 4px;
+}
+
+.modal-form-comment:focus-visible {
+  outline: none;
+}
+.modal-link {
+  color: var(--accent-color);
 }
 .close-btn {
   position: absolute;
@@ -735,6 +762,7 @@ img {
 
   transition: color 250ms var(--hover-time-func);
 }
+
 .close-btn-icon {
   fill: currentColor;
 }
